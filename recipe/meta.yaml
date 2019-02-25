@@ -1,5 +1,5 @@
 {% set name = "ILAMB" %}
-{% set version = "2.3.1" %}
+{% set version = "2.4" %}
 
 package:
   name: '{{ name|lower }}'
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 15c2e0da0139d406df5883dad428ab8692aeebbb55368db0ed3b93466f9d19db
+  sha256: d36e267343c13d37c24a056501fc7927219029ebfc46e1cd23b6878e7040d050
 
 build:
   number: 0
