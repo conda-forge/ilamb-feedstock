@@ -40,7 +40,7 @@ Current build status
 
 [![Linux](https://img.shields.io/circleci/project/github/conda-forge/ilamb-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/ilamb-feedstock)
 [![OSX](https://img.shields.io/travis/conda-forge/ilamb-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/ilamb-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/ilamb-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/ilamb-feedstock/branch/master)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
