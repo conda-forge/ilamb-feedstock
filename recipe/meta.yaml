@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  skip: True  # [py2k]
+  skip: True  # [py2k or win]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -34,12 +34,12 @@ test:
   imports:
     - ILAMB
   commands:
-    - ilamb-fetch -h  # [not win]
-    - ilamb-run -h  # [not win]
-    - ilamb-table -h  # [not win]
+    - ilamb-fetch -h
+    - ilamb-run -h
+    - ilamb-table -h
     # FIXME: Broken in v2.4, will be fixed next release
-    # - ilamb-doctor -h  # [not win]
-    # - ilamb-mean -h  # [not win]
+    # - ilamb-doctor -h
+    # - ilamb-mean -h
 
 
 about:
