@@ -1,5 +1,5 @@
 {% set name = "ILAMB" %}
-{% set version = "2.4" %}
+{% set version = "2.5" %}
 
 package:
   name: '{{ name|lower }}'
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d36e267343c13d37c24a056501fc7927219029ebfc46e1cd23b6878e7040d050
+  sha256: d156ab01a2e895fb6ca0da870d385e8872b434e928061f2b440582fa8eb247a5
 
 build:
   number: 0
@@ -21,9 +21,9 @@ requirements:
     - setuptools
   run:
     - python
-    - basemap >=1.0.7
-    - cf-units >=2.0.0
-    - matplotlib >=1.4.3
+    - cartopy >=0.17.0
+    - cf_units >=2.0.0
+    - matplotlib >=2.2
     - mpi4py >=1.3.1
     - netCDF4 >=1.1.4
     - numpy >=1.11.0
@@ -37,10 +37,6 @@ test:
     - ilamb-fetch -h
     - ilamb-run -h
     - ilamb-table -h
-    # FIXME: Broken in v2.4, will be fixed next release
-    # - ilamb-doctor -h
-    # - ilamb-mean -h
-
 
 about:
   home: https://bitbucket.org/ncollier/ilamb
