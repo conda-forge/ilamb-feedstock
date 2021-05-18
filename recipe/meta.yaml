@@ -10,9 +10,9 @@ source:
   sha256: 4363afb2ca9299917e2a31827b1563d0408e8cd736e2188e84bdd3b72d22ecb0
 
 build:
-  number: 3
-  skip: True  # [py2k or win]
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  skip: true  # [py2k or win]
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -33,7 +33,7 @@ requirements:
     - scipy >=0.9.0
     - sympy >=0.7.6
     - pandas
-    
+
 test:
   imports:
     - ILAMB
@@ -69,8 +69,8 @@ about:
     It is the last of these goals to which this repository is concerned. We have
     developed a python-based generic benchmarking system, initially focused on
     assessing land model performance.
-  doc_url: 'https://www.ilamb.org/doc'
-  dev_url: 'https://github.com/rubisco-sfa/ILAMB'
+  doc_url: https://www.ilamb.org/doc
+  dev_url: https://github.com/rubisco-sfa/ILAMB
 
 extra:
   recipe-maintainers:
