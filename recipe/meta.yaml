@@ -1,5 +1,5 @@
 {% set name = "ILAMB" %}
-{% set version = "2.4" %}
+{% set version = "2.6" %}
 
 package:
   name: '{{ name|lower }}'
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d36e267343c13d37c24a056501fc7927219029ebfc46e1cd23b6878e7040d050
+  sha256: 4363afb2ca9299917e2a31827b1563d0408e8cd736e2188e84bdd3b72d22ecb0
 
 build:
   number: 0
@@ -29,7 +29,8 @@ requirements:
     - numpy >=1.11.0
     - scipy >=0.9.0
     - sympy >=0.7.6
-
+    - pandas
+    
 test:
   imports:
     - ILAMB
@@ -37,10 +38,6 @@ test:
     - ilamb-fetch -h
     - ilamb-run -h
     - ilamb-table -h
-    # FIXME: Broken in v2.4, will be fixed next release
-    # - ilamb-doctor -h
-    # - ilamb-mean -h
-
 
 about:
   home: https://bitbucket.org/ncollier/ilamb
