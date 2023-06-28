@@ -35,6 +35,8 @@ requirements:
     - pandas
     - tqdm
     - cftime
+    - pyarrow
+    - pyyaml
 
 test:
   imports:
