@@ -1,5 +1,5 @@
 {% set name = "ILAMB" %}
-{% set version = "2.6" %}
+{% set version = "2.7" %}
 
 package:
   name: ilamb
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4363afb2ca9299917e2a31827b1563d0408e8cd736e2188e84bdd3b72d22ecb0
+  sha256: 7c8b3fd240a603e01a3bcbeb9dbd81bf842404fecaa0ada3f839703897948080
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py2k or win]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -33,6 +33,10 @@ requirements:
     - scipy >=0.9.0
     - sympy >=0.7.6
     - pandas
+    - tqdm
+    - cftime
+    - pyarrow
+    - pyyaml
 
 test:
   imports:
@@ -40,7 +44,6 @@ test:
   commands:
     - ilamb-fetch -h
     - ilamb-run -h
-    - ilamb-table -h
 
 about:
   home: https://github.com/rubisco-sfa/ILAMB
