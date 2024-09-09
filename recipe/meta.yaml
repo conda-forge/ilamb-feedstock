@@ -1,5 +1,5 @@
-{% set name = "ILAMB" %}
-{% set version = "2.7" %}
+{% set name = "ilamb" %}
+{% set version = "2.7.2" %}
 
 package:
   name: ilamb
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7c8b3fd240a603e01a3bcbeb9dbd81bf842404fecaa0ada3f839703897948080
+  sha256: 4258445f8ae052a8346ba45131db82becd7023ef66051b2aa6161a4b0a531f0a
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py2k or win]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
